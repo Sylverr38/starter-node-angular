@@ -8,9 +8,10 @@ cache:
     - "node_modules"
 install:
   - npm install
+script:
 deploy:
   - provider: script
-    cleanup: true
+    skip_cleanup: true
     script: chmod +x ./deploy.sh && ./deploy.sh
     on:
       branch: master
